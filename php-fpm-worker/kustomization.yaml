@@ -1,0 +1,5 @@
+commonLabels:
+  service: worker
+
+resources:
+  - deployment.yaml
