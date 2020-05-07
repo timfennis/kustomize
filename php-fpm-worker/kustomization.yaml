@@ -1,5 +1,6 @@
 commonLabels:
   service: worker
+  serviceType: php
 
 resources:
   - deployment.yaml
