@@ -15,7 +15,7 @@ spec:
             - "envsubst '${PHP_FPM_SERVICE_NAME}' < /etc/nginx/conf.d.template/default.conf > /etc/nginx/conf.d/default.conf && exec nginx -g 'daemon off;'"
           env:
             # This needs to be dynamic since it varies per environment (acc-app, prod-app, etc.)
-            - name: FPM_SERVICE
+            - name: PHP_FPM_SERVICE_NAME
               value: $(PHP_FPM_SERVICE_NAME)
           volumeMounts:
             - mountPath: /etc/nginx/conf.d.template
