@@ -1,6 +1,5 @@
 commonLabels:
   service: php-fpm
-  serviceType: php
 
 resources:
   - service.yaml
