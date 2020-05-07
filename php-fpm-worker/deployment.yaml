@@ -12,5 +12,3 @@ spec:
           image: php-fpm # Should be replaced by set image
           command:
             - bin/worker
-          ports:
-            - containerPort: 9000
