@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: php-fpm
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - name: php-fpm
+          image: php-fpm # Should be replaced by set image
+          ports:
+            - containerPort: 9000

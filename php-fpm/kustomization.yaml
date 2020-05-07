@@ -1,0 +1,6 @@
+commonLabels:
+  service: php-fpm
+
+resources:
+  - service.yaml
+  - deployment.yaml
