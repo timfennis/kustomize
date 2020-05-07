@@ -1,0 +1,6 @@
+commonLabels:
+  service: postgres
+
+resources:
+  - deployment.yaml
+  - services.yaml
