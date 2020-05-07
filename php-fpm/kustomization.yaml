@@ -12,5 +12,5 @@ vars:
       fieldpath: metadata.name
     objref:
       kind: Service
-      name: app
+      name: php-fpm
       apiVersion: v1
