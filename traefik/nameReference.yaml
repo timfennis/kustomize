@@ -1,6 +1,5 @@
 nameReference:
   - kind: IngressRoute
-    version: v1alpha1
     fieldSpecs:
       - path: spec/routes/services/name
         kind: Service
