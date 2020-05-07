@@ -1,0 +1,10 @@
+resources:
+  - ../nginx
+
+patchesStrategicMerge:
+  - deployment.yaml
+
+configMapGenerator:
+  - name: nginx-config
+    files:
+      - config/default.conf
