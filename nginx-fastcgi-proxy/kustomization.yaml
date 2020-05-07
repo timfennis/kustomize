@@ -5,6 +5,6 @@ patchesStrategicMerge:
   - deployment.yaml
 
 configMapGenerator:
-  - name: nginx-config
+  - name: nginx-config-template
     files:
       - config/default.conf
