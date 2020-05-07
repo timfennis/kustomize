@@ -4,3 +4,13 @@ commonLabels:
 resources:
   - deployment.yaml
   - service.yaml
+
+vars:
+  # REDIS_SERVICE_NAME can be used by nginx as value for fastcgi_pass
+  - name: REDIS_SERVICE_NAME
+    fieldref:
+      fieldpath: metadata.name
+    objref:
+      kind: Service
+      name: redis
+      apiVersion: v1
