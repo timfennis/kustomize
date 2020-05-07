@@ -4,3 +4,13 @@ commonLabels:
 resources:
   - service.yaml
   - deployment.yaml
+
+vars:
+  # APP_SERVICE_NAME is used by nginx as value for fastcgi_pass
+  - name: PHP_FPM_SERVICE_NAME
+    fieldref:
+      fieldpath: metadata.name
+    objref:
+      kind: Service
+      name: app
+      apiVersion: v1

@@ -1,5 +1,5 @@
 commonLabels:
-  service: postgres
+  service: redis
 
 resources:
   - deployment.yaml
