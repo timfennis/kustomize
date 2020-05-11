@@ -1,0 +1,5 @@
+resources:
+  - ../mariadb
+
+patchesStrategicMerge:
+  - deployment.yaml

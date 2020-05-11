@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mariadb
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    spec:
+      containers:
+        - name: mariadb
+          image: mariadb:10
+          ports:
+            - name: mysql
+              containerPort: 3306
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: mariadb
+            - name: MYSQL_PASSWORD
+              value: mariadb
+            - name: MYSQL_USER
+              value: mariadb
+            - name: MYSQL_DATABASE
+              value: mariadb
+

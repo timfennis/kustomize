@@ -1,0 +1,16 @@
+commonLabels:
+  service: mariadb
+
+resources:
+  - deployment.yaml
+  - service.yaml
+
+vars:
+  # POSTGRES_SERVICE_NAME can be used by nginx as value for fastcgi_pass
+  - name: MARIADB_SERVICE_NAME
+    fieldref:
+      fieldpath: metadata.name
+    objref:
+      kind: Service
+      name: mariadb
+      apiVersion: v1

@@ -1,0 +1,32 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: ingres-route
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`default.k8s.t91.nl`)
+      kind: Rule
+      services:
+        - name: service
+          port: 80
+      middlewares:
+        - name: redirect-https
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: ingres-route-tls
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`default.k8s.t91.nl`)
+      kind: Rule
+      services:
+        - name: service
+          port: 80
+  tls:
+    certResolver: myresolver
