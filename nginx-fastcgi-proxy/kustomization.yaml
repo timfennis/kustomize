@@ -1,5 +1,5 @@
 resources:
-  - ../nginx
+  - github.com/timfennis/kustomize/nginx
 
 patchesStrategicMerge:
   - deployment.yaml
