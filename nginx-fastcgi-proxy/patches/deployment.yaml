@@ -16,9 +16,9 @@ spec:
               value: '80'
           # Mount the fastcgi config
           volumeMounts:
-            - mountPath: /etc/nginx/conf.d
-              name: nginx-config
+            - mountPath: /etc/nginx/templates/
+              name: nginx-config-template
       volumes:
         - configMap:
-            name: nginx-config
-          name: nginx-config
+            name: nginx-config-template
+          name: nginx-config-template
