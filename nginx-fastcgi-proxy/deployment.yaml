@@ -6,7 +6,7 @@ spec:
   template:
     spec:
       containers:
-        - name: nginx:1.19-alpine
+        - name: nginx
           # Command is no longer needed because nginx 1.19 supports env vars
           env:
             # This needs to be dynamic since it varies per environment (acc-app, prod-app, etc.)
