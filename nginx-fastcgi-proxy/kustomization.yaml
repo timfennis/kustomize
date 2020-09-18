@@ -2,7 +2,7 @@ resources:
   - github.com/timfennis/kustomize/nginx
 
 patchesStrategicMerge:
-  - deployment.yaml
+  - patches/deployment.yaml
 
 configMapGenerator:
   - name: nginx-config
