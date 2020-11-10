@@ -1,0 +1,6 @@
+commonLabels:
+  service: node
+
+resources:
+  - service.yaml
+  - deployment.yaml

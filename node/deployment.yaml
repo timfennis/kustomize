@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - name: node
+          image: node:alpine
+          ports:
+            - containerPort: 3000
+          livenessProbe:
+            initialDelaySeconds: 30
+            tcpSocket:
+              port: 3000
+            timeoutSeconds: 1
+          readinessProbe:
+            tcpSocket:
+              port: 3000
+            initialDelaySeconds: 5
+            timeoutSeconds: 1
