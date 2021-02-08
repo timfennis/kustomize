@@ -8,9 +8,12 @@ spec:
     - protocol: UDP
       port: 2456
       nodePort: 32456
+      name: port_2456
     - protocol: UDP
       port: 2457
       nodePort: 32457
+      name: port_2457
     - protocol: UDP
       port: 2458
       nodePort: 32458
+      name: port_2458
