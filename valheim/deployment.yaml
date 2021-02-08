@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: valheim
+spec:
+  replicas: 1
+  template:
+    spec:
+      volumes:
+        - name: steam
+          hostPath:
+            path: /var/valheim/steam
+        - name: save
+          hostPath:
+            path: /var/valheim/save
+      containers:
+        - name: valheim
+          image: mbround18/valheim
+          ports:
+            - containerPort: 2456
+            - containerPort: 2457
+            - containerPort: 2458
+          volumeMounts:
+            - mountPath: /home/steam/valheim
+              name: steam
+            - mountPath: /home/steam/.config/unity3d/IronGate/Valheim
+              name: save
+      initContainers:
+        - name: download-game
+          image: busyboxy
+          command:
+            - 'sh'
+            - '-c'
+            - 'wget -O /tmp/save.tar.gz https://s.timfennis.com/dl/valheim.tar.gz; tar -xvf /tmp/save.tar.gz -C /save'
+          volumeMounts:
+            - mountPath: /save
+              name: save

@@ -1,0 +1,6 @@
+commonLabels:
+  service: valheim
+
+resources:
+  - deployment.yaml
+  - service.yaml
