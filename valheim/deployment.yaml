@@ -24,8 +24,11 @@ spec:
           image: mbround18/valheim
           ports:
             - containerPort: 32456
+              protocol: UDP
             - containerPort: 32457
+              protocol: UDP
             - containerPort: 32458
+              protocol: UDP
           volumeMounts:
             - mountPath: /home/steam/valheim
               name: steam
