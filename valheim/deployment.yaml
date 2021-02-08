@@ -27,7 +27,7 @@ spec:
               name: save
       initContainers:
         - name: download-game
-          image: busyboxy
+          image: busybox
           command:
             - 'sh'
             - '-c'
