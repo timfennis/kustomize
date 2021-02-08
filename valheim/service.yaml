@@ -6,14 +6,14 @@ spec:
   type: NodePort
   ports:
     - protocol: UDP
-      port: 2456
+      port: 32456
       nodePort: 32456
       name: port-six
     - protocol: UDP
-      port: 2457
+      port: 32457
       nodePort: 32457
       name: port-seven
     - protocol: UDP
-      port: 2458
+      port: 32458
       nodePort: 32458
       name: port-eight

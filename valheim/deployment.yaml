@@ -21,9 +21,9 @@ spec:
         - name: valheim
           image: mbround18/valheim
           ports:
-            - containerPort: 2456
-            - containerPort: 2457
-            - containerPort: 2458
+            - containerPort: 32456
+            - containerPort: 32457
+            - containerPort: 32458
           volumeMounts:
             - mountPath: /home/steam/valheim
               name: steam
