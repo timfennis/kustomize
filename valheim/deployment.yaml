@@ -40,7 +40,7 @@ spec:
           command:
             - 'sh'
             - '-c'
-            - 'wget -O /tmp/save.tar.gz https://s.timfennis.com/dl/valheim.tar.gz; tar --skip-old-files -xvf /tmp/save.tar.gz -C /save'
+            - 'wget -O /tmp/save.tar.gz https://s.timfennis.com/dl/valheim.tar.gz; tar -xvf /tmp/save.tar.gz -C /save'
           volumeMounts:
             - mountPath: /save
               name: save
