@@ -12,6 +12,7 @@ spec:
             # This needs to be dynamic since it varies per environment (acc-app, prod-app, etc.)
             - name: PHP_FPM_SERVICE_NAME
               value: $(PHP_FPM_SERVICE_NAME)
+
             - name: NGINX_PORT
               value: '80'
           # Mount the fastcgi config
