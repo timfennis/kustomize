@@ -1,0 +1,6 @@
+commonLabels:
+  service: varnish
+
+resources:
+  - deployment.yaml
+  - service.yaml
