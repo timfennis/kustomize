@@ -5,6 +5,11 @@ resources:
   - service.yaml
   - deployment.yaml
 
+configMapGenerator:
+  - name: php-fpm-config
+    files:
+      - config/php-fpm.conf
+
 vars:
   # PHP_FPM_SERVICE_NAME can be used by nginx as value for fastcgi_pass
   - name: PHP_FPM_SERVICE_NAME

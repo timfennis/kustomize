@@ -13,9 +13,19 @@ spec:
           image: php-fpm # Should be replaced by set image
           ports:
             - containerPort: 9000
+          livenessProbe:
+            initialDelaySeconds: 30
+            tcpSocket:
+              port: 9000
+            timeoutSeconds: 1
           volumeMounts:
+            - mountPath: /usr/local/etc/php-fpm.d
+              name: php-fpm-config
             - mountPath: /var/logs
               name: logs
       volumes:
+        - name: php-fpm-config
+          configMap:
+            name: php-fpm-config
         - name: logs
           emptyDir: {}
