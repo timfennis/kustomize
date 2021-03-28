@@ -13,3 +13,9 @@ spec:
           image: php-fpm # Should be replaced by set image
           ports:
             - containerPort: 9000
+          volumeMounts:
+            - mountPath: /var/logs
+              name: logs
+      volumes:
+        - name: logs
+          emptyDir: {}
