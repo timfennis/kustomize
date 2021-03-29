@@ -1,5 +1,5 @@
 resources:
-  - github.com/timfennis/kustomize/postgres
+  - ../postgres
 
 patchesStrategicMerge:
   - deployment.yaml

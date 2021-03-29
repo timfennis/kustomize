@@ -1,5 +1,5 @@
 resources:
-  - github.com/timfennis/kustomize/mariadb
+  - ../mariadb
 
 patchesStrategicMerge:
   - deployment.yaml
